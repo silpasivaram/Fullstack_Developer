@@ -32,14 +32,14 @@ int main()
 			{
 				getInput();
 				PetrolEngine obj;
-				std::cout << "Efficiency of Pertrol Engine is " << obj.GetEfficiency(input, output);
+				std::cout << "Efficiency of Pertrol Engine is " << obj.GetEfficiency(input, output)<<"%";
 				goto step;
 			}
 			else if (no == 4)
 			{
 				getInput();
 				DieselEngine obj;
-				std::cout << "Efficiency of Diesel Engine is " << obj.GetEfficiency(input, output);
+				std::cout << "Efficiency of Diesel Engine is " << obj.GetEfficiency(input, output)<<"%";
 				goto step;
 			}
 			else
@@ -52,7 +52,7 @@ int main()
 		{
 			getInput();
 			SteamEngine obj;
-			std::cout << "Efficiency of Steam engine is  " << obj.GetEfficiency(input, output);
+			std::cout << "Efficiency of Steam engine is  " << obj.GetEfficiency(input, output)<<"%";
 			goto step;
 		}
 		else if (no == 3)
@@ -70,6 +70,7 @@ int main()
 	catch (const std::exception&)
 	{
 		std::cout << "Please enter a valid number other than zero for input";
+		goto step;
 	}
 	return 0;
 }
