@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<MainSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Text1>Welcome To KTS Infotech</Text1>
+  <Text2>Have A Happy Day</Text2>
+  <Header>IT COMPANY</Header>
+  <Footer>@All Rights Reserved</Footer>
+  <VisitorNo>2</VisitorNo>
+  <RefreshCounter>0</RefreshCounter>
+</MainSettings>
