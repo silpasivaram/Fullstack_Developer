@@ -12,7 +12,6 @@ namespace WebApplication1
         public string Text2 { get; set; }
         public string Header { get; set; }
         public string Footer { get; set; }
-        public int VisitorNo { get; set; }
         public int RefreshCounter { get; set; }
 
         public MainSettings()
@@ -21,7 +20,6 @@ namespace WebApplication1
             Text2 = string.Empty;
             Header = string.Empty;
             Footer = string.Empty;
-            VisitorNo = 0;
             RefreshCounter = 0;
         }
     }

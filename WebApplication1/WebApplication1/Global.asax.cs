@@ -27,26 +27,14 @@ namespace WebApplication1
 
             if (Application["visitor"] == null)
             {
-                Application.Add("visitor", 1);
+                Application.Add("visitor", 0);
             }
-            else
-            {
-                try
-                {
+
                     int iCount = Convert.ToInt32(Application["visitor"]);
                     iCount++;
-                    MainSettings Set = (MainSettings)Application["Settings"];
-                    Set.VisitorNo += iCount;
-                    XmlSerial.SaveSettings(Set);
-                    Application["visitor"] = Set.VisitorNo.ToString();
-                }
-                catch (Exception)
-                {
-
-                    
-                }
-                
-            }
+                    Application["visitor"] = iCount.ToString();
+               
+            
         }
             
 
