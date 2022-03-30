@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="MobileApp_Xamarin.Policy_Page" BackgroundColor="#EFF1F5" >
+
+
+    <NavigationPage.TitleView >
+        <Grid Margin="0,0,15,0" ColumnSpacing="0" BackgroundColor="Transparent"
+              VerticalOptions="Fill" HorizontalOptions="Fill">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20*" />
+                <ColumnDefinition Width="80*" />
+                <ColumnDefinition Width="20*" />
+            </Grid.ColumnDefinitions>
+              
+                
+                <ImageButton Grid.Row="0" Grid.Column="2" Source="dot.png" 
+                         VerticalOptions="Fill" HorizontalOptions="End" Margin="0,0,0,0"
+                         BackgroundColor="Transparent" Aspect="AspectFit" />
+        </Grid>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <Grid Margin="20,0,20,0" RowSpacing="0" Padding="0" BackgroundColor="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition Height="92*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="My Policies" VerticalTextAlignment="Center" 
+              BackgroundColor="Transparent" FontFamily=" Regular" 
+               FontSize="30" TextColor="#555555" Margin="10,0,0,0" />
+
+
+            <ScrollView Grid.Row="1" Grid.Column="0"  BackgroundColor="#EFF1F5" Padding="0" Margin="0,10,0,0">
+                <StackLayout>
+                    <xct:Expander x:Name="ExpanderActivePolicy" Tapped="ExpanderActivePolicy_Tapped"  
+                                  BackgroundColor="Transparent"
+                        CollapseAnimationLength="200" IsExpanded="False" >
+                        <xct:Expander.Header BackgroundColor="#EFF1F5" >
+                            <Frame HeightRequest="60" WidthRequest="100"
+                            BackgroundColor="#EFF1F5" Padding="0" Margin="10" CornerRadius="10" HasShadow="True">
+
+                                <Grid ColumnSpacing="0"  BackgroundColor="#EFF1F5"
+                                  VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid Margin="20,0,20,2" BackgroundColor="Transparent" 
+                                      ColumnSpacing="0"
+                                      VerticalOptions="Fill" HorizontalOptions="Fill">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20*" />
+                                        <ColumnDefinition Width="60*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Row="0" Grid.Column="0" Source="AP.png" 
+                                       VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10" 
+                                       BackgroundColor="#EFF1F5" Aspect="AspectFit" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Active Policy" 
+                                       VerticalTextAlignment="Center" BackgroundColor="Transparent" 
+                                       FontFamily="Medium" FontSize="16" 
+                                       TextColor="#555555" Margin="0,0,0,0" FontAttributes="Bold" >
+                                    </Label>
+                                    <Image x:Name="ImgActivePolicyUpdown" Grid.Row="0" Grid.Column="2"
+                                           Source="chevron_down.png" VerticalOptions="Center"
+                                           HorizontalOptions="Center" Margin="0,0,0,0" 
+                                         BackgroundColor="#EFF1F5" Aspect="AspectFill" />
+                                </Grid>
+                            </Grid>
+
+                            </Frame>
+                        </xct:Expander.Header>
+
+
+                        <StackLayout BackgroundColor="Transparent" Margin="40,0,23,0">
+                            <Frame HeightRequest="45" WidthRequest="100" BackgroundColor="Transparent"
+                                   Padding="0" Margin="0,0,0,0" CornerRadius="0" HasShadow="False">
+                                <Grid Margin="0" BackgroundColor="Transparent" ColumnSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="View Policy List" VerticalTextAlignment="Center"
+                                           BackgroundColor="Transparent" FontFamily="LightFont" FontSize="16" 
+                                           TextColor="#555555" Margin="15,0,0,0" />
+                                    <Image Grid.Row="0" Grid.Column="1" Source="chevron_right.png" 
+                                           VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,0" 
+                                           BackgroundColor="Transparent" Aspect="AspectFill" />
+                                </Grid>
+                            </Frame>
+                            <Frame HeightRequest="45" WidthRequest="100" BackgroundColor="Transparent" Padding="0" 
+                                   Margin="0,0,0,0" CornerRadius="0" HasShadow="False">
+                                <Grid Margin="0" BackgroundColor="Transparent" ColumnSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Download Policy schedule" 
+                                           VerticalTextAlignment="Center" BackgroundColor="Transparent" 
+                                           FontFamily="LightFont" FontSize="16" TextColor="#555555" Margin="15,0,0,0" />
+                                    <Image Grid.Row="0" Grid.Column="1" Source="chevron_right.png"
+                                           VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,0" 
+                                           BackgroundColor="Transparent" Aspect="AspectFill" />
+                                </Grid>
+                            </Frame>
+                            <Frame HeightRequest="45" WidthRequest="100" BackgroundColor="Transparent" Padding="0" 
+                                   Margin="0,0,0,0" CornerRadius="0" HasShadow="False">
+                                <Grid Margin="0" BackgroundColor="Transparent" ColumnSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="View premium receipt" VerticalTextAlignment="Center"
+                                           BackgroundColor="Transparent" FontFamily="LightFont" FontSize="16"
+                                           TextColor="#555555" Margin="15,0,0,0" />
+                                    <Image Grid.Row="0" Grid.Column="1" Source="chevron_right.png" VerticalOptions="Center" 
+                                           HorizontalOptions="Center" Margin="0,0,0,0" BackgroundColor="Transparent" 
+                                           Aspect="AspectFill" />
+                                </Grid>
+                            </Frame>
+                            <Frame HeightRequest="45" WidthRequest="100" BackgroundColor="Transparent" Padding="0"
+                                   Margin="0,0,0,0" CornerRadius="0" HasShadow="False">
+                                <Grid Margin="0" BackgroundColor="Transparent" ColumnSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="View products benefits" 
+                                           VerticalTextAlignment="Center" BackgroundColor="Transparent" 
+                                           FontFamily="LightFont" FontSize="16" TextColor="#555555" Margin="15,0,0,0" />
+                                    <Image Grid.Row="0" Grid.Column="1" Source="chevron_right.png" VerticalOptions="Center"
+                                           HorizontalOptions="Center" Margin="0,0,0,0" BackgroundColor="Transparent" 
+                                           Aspect="AspectFill" />
+                                </Grid>
+                            </Frame>
+                            <Frame HeightRequest="45" WidthRequest="100" BackgroundColor="Transparent" Padding="0"
+                                   Margin="0,0,0,0" CornerRadius="0" HasShadow="False">
+                                <Grid Margin="0" BackgroundColor="Transparent" ColumnSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Surrendering Policy" VerticalTextAlignment="Center"
+                                           BackgroundColor="Transparent" FontFamily="LightFont" FontSize="16" 
+                                           TextColor="#555555" Margin="15,0,0,0" />
+                                    <Image Grid.Row="0" Grid.Column="1" Source="chevron_right.png" VerticalOptions="Center"
+                                           HorizontalOptions="Center" Margin="0,0,0,0" BackgroundColor="Transparent" 
+                                           Aspect="AspectFill" />
+                                </Grid>
+                            </Frame>
+                            <Frame HeightRequest="45" WidthRequest="100" BackgroundColor="Transparent" Padding="0" 
+                                   Margin="0,0,0,0" CornerRadius="0" HasShadow="False">
+                                <Grid Margin="0" BackgroundColor="Transparent" ColumnSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="80*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Mail me policy" VerticalTextAlignment="Center" 
+                                           BackgroundColor="Transparent" FontFamily="LightFont"
+                                           FontSize="16" TextColor="#555555" Margin="15,0,0,0" />
+                                    <Image Grid.Row="0" Grid.Column="1" Source="chevron_right.png" VerticalOptions="Center" 
+                                           HorizontalOptions="Center" Margin="0,0,0,0" BackgroundColor="Transparent" 
+                                           Aspect="AspectFill" />
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </xct:Expander>
+                    
+                    <xct:Expander x:Name="ExpanderPolicyChanges"
+                                  CollapseAnimationLength="250">
+                        <xct:Expander.Header  HasShadow="True">
+                            <Frame HeightRequest="60" WidthRequest="100" BackgroundColor="#EFF1F5" Padding="0" 
+                                   Margin="10" CornerRadius="10" HasShadow="True">
+                                <Grid ColumnSpacing="0" BackgroundColor="#EFF1F5" VerticalOptions="Fill" 
+                                  HorizontalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100*" />
+                                </Grid.ColumnDefinitions>
+                                    <Grid x:Name="PolicyChanges" Margin="20,0,20,2" BackgroundColor="Transparent" 
+                                      ColumnSpacing="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="100*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="20*" />
+                                        <ColumnDefinition Width="60*" />
+                                        <ColumnDefinition Width="20*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Row="0" Grid.Column="0" Source="P_change.png" 
+                                           VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10" 
+                                           BackgroundColor="Transparent" Aspect="AspectFit" />
+                                    <Label Grid.Row="0" Grid.Column="1" Text="Policy Changes"
+                                           VerticalTextAlignment="Center" BackgroundColor="Transparent" 
+                                           FontFamily="Medium" FontSize="16" TextColor="#555555" Margin="0,0,0,0" FontAttributes="Bold"/>
+                                    <Image x:Name="ImgPolicyChanges" Grid.Row="0" Grid.Column="2" Source="chevron_down.png" 
+                                           VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,0" 
+                                           BackgroundColor="Transparent" Aspect="AspectFit" />
+                                </Grid>
+                            </Grid>
+                            </Frame>
+                        </xct:Expander.Header>
+                        
+                    </xct:Expander>
+
+                    <xct:Expander x:Name="ExpanderLapsedPolicy"
+                                  CollapseAnimationLength="250">
+                    <xct:Expander.Header  >
+                            <Frame HeightRequest="60" WidthRequest="100" BackgroundColor="#EFF1F5" 
+                               Padding="0" Margin="10" CornerRadius="10" HasShadow="True">
+                                <Grid ColumnSpacing="0" BackgroundColor="#EFF1F5" VerticalOptions="Fill" 
+                                  HorizontalOptions="Fill">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid Margin="20,0,20,2" BackgroundColor="Transparent" 
+                                      ColumnSpacing="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20*" />
+                                    <ColumnDefinition Width="60*" />
+                                    <ColumnDefinition Width="20*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Row="0" Grid.Column="0" Source="L_Policy.png" 
+                                           VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10" 
+                                           BackgroundColor="Transparent" Aspect="AspectFit" />
+                                <Label Grid.Row="0" Grid.Column="1" Text="Lapsed Policy"
+                                           VerticalTextAlignment="Center" BackgroundColor="Transparent" 
+                                           FontFamily="Medium" FontSize="16" FontAttributes="Bold" TextColor="#555555" 
+                                       Margin="0,0,0,0" />
+                                <Image x:Name="LapsedPolicy" Grid.Row="0" Grid.Column="2" Source="chevron_down.png" 
+                                           VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,0" 
+                                           BackgroundColor="Transparent" Aspect="AspectFit" />
+                            </Grid>
+
+                                
+                            </Grid>
+                            </Frame>
+
+                        </xct:Expander.Header>
+
+                </xct:Expander>
+                
+                    <xct:Expander x:Name="ExpanderPayment"
+                                  CollapseAnimationLength="250">
+                        <xct:Expander.Header  BackgroundColor="#EFF1F5">
+
+                            <Grid ColumnSpacing="0" BackgroundColor="#EFF1F5" VerticalOptions="Fill" 
+                                  HorizontalOptions="Fill">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="100*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100*" />
+                                </Grid.ColumnDefinitions>
+
+
+                                <Frame HeightRequest="60" WidthRequest="100" 
+                            BackgroundColor="#EFF1F5" Padding="0" Margin="10" CornerRadius="10" HasShadow="True">
+
+
+                                    <Grid Margin="20,0,20,2" BackgroundColor="#EFF1F5"
+                                      ColumnSpacing="0" VerticalOptions="Fill"  HorizontalOptions="Fill">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="100*" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="20*" />
+                                            <ColumnDefinition Width="60*" />
+                                            <ColumnDefinition Width="20*" />
+                                        </Grid.ColumnDefinitions>
+
+
+                                       <Image Grid.Row="0" Grid.Column="0" Source="Payment.png" 
+                                           VerticalOptions="Fill" HorizontalOptions="Fill" Margin="10" 
+                                           BackgroundColor="#EFF1F5" Aspect="AspectFit" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="Payment "
+                                           VerticalTextAlignment="Center" BackgroundColor="Transparent" 
+                                           FontFamily="Medium" FontSize="16" FontAttributes="Bold" TextColor="#555555" 
+                                               Margin="0,0,0,0" />
+                                       <Image x:Name="Payment" Grid.Row="0" Grid.Column="2" Source="chevron_down.png" 
+                                           VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,0,0" 
+                                                 BackgroundColor="#EFF1F5" Aspect="AspectFit" />
+
+                                    </Grid>
+                                </Frame>
+                                
+                            </Grid>
+
+
+                            
+                            
+                        </xct:Expander.Header>
+
+                </xct:Expander>
+
+            </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
